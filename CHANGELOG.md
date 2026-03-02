@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.3...v1.0.4) (2026-03-02)
+
+
+### Bug Fixes
+
+* remove private flag to allow npm publish ([3211102](https://github.com/hyperi-io/ci-test-ts-simple/commit/3211102556c8242b8d1108fd729dc6b6bf889431))
+
 ## [1.0.3](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.2...v1.0.3) (2026-03-02)
 
 
