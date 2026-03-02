@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.7...v1.0.8) (2026-03-02)
+
+
+### Bug Fixes
+
+* update ci submodule for TS pipeline improvements ([6308720](https://github.com/hyperi-io/ci-test-ts-simple/commit/63087200b03e9c5ca937a6c7027b4474ac7cdb8e))
+
 ## [1.0.7](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.6...v1.0.7) (2026-03-02)
 
 
