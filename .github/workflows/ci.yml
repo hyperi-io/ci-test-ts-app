@@ -21,11 +21,6 @@ jobs:
   quality:
     name: Quality
     runs-on: ${{ vars.GH_RUNNER_DEFAULT || 'ubuntu-latest' }}
-    container:
-      image: ${{ vars.CI_RUNNER_IMAGE || 'hypersec.jfrog.io/hyperi-docker/ci-runner:ubuntu-24.04' }}
-      credentials:
-        username: ${{ secrets.ARTIFACTORY_CI_USERNAME }}
-        password: ${{ secrets.ARTIFACTORY_CI_TOKEN }}
     steps:
       - name: Generate token
         id: token
