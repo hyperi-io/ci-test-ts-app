@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.2...v1.0.3) (2026-03-02)
+
+
+### Bug Fixes
+
+* add missing vitest coverage dependency ([8d05ca8](https://github.com/hyperi-io/ci-test-ts-simple/commit/8d05ca8b4968ca4f5e465fac4c1fc4969b590754))
+
 ## [1.0.2](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.1...v1.0.2) (2026-03-02)
 
 
