@@ -1,0 +1,28 @@
+{
+  "name": "ci-test-ts-simple",
+  "version": "0.0.1",
+  "description": "Simple TypeScript package for testing HyperI CI pipelines",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --check \"src/**/*.ts\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "FSL-1.1-ALv2",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.4.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}

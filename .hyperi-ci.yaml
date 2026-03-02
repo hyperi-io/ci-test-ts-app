@@ -1,0 +1,15 @@
+# Project:    ci-test-ts-simple
+# File:       .hyperi-ci.yaml
+# License:    FSL-1.1-ALv2
+# Copyright:  (c) 2026 HYPERI PTY LIMITED
+
+language: typescript
+
+quality:
+  enabled: true
+
+test:
+  enabled: true
+
+build:
+  enabled: true
