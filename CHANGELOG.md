@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.4...v1.0.5) (2026-03-02)
+
+
+### Bug Fixes
+
+* update ci submodule for npm auth token fix ([3865bda](https://github.com/hyperi-io/ci-test-ts-simple/commit/3865bdab946cac3fc800819c9af91f6081dea1a7))
+
 ## [1.0.4](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.3...v1.0.4) (2026-03-02)
 
 
