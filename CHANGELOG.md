@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.6...v1.0.7) (2026-03-02)
+
+
+### Bug Fixes
+
+* update ci submodule for storage API verification ([ae46a4c](https://github.com/hyperi-io/ci-test-ts-simple/commit/ae46a4c79c4ae829eae4a79f05560c320d8720ef))
+
 ## [1.0.6](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.5...v1.0.6) (2026-03-02)
 
 
