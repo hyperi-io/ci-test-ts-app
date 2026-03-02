@@ -2,7 +2,6 @@
   "name": "ci-test-ts-simple",
   "version": "1.0.3",
   "description": "Simple TypeScript package for testing HyperI CI pipelines",
-  "private": true,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
