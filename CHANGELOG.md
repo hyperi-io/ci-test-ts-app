@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.5...v1.0.6) (2026-03-02)
+
+
+### Bug Fixes
+
+* update ci submodule for npm verify auth fix ([8f1c01a](https://github.com/hyperi-io/ci-test-ts-simple/commit/8f1c01a339ba831dd5f5fafd38cc41a7f153a223))
+
 ## [1.0.5](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.4...v1.0.5) (2026-03-02)
 
 
