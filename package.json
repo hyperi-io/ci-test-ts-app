@@ -1,23 +1,25 @@
 {
-  "name": "ci-test-ts-simple",
-  "version": "1.0.8",
-  "description": "Simple TypeScript package for testing HyperI CI pipelines",
+  "name": "ci-test-ts-app",
+  "version": "1.0.0",
+  "description": "TypeScript app variant — exercises hyperi-ci container custom mode (GHCR)",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/server.js",
     "lint": "eslint src/",
     "test": "vitest run",
     "check-types": "tsc --noEmit",
     "format": "prettier --check \"src/**/*.ts\""
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "license": "FSL-1.1-ALv2",
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.0.0",
     "prettier": "^3.0.0",
