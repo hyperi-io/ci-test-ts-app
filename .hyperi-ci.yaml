@@ -1,26 +1,26 @@
 # Project:   ci-test-ts-app
+# File:      .hyperi-ci.yaml
+# Purpose:   HyperI CI configuration
+#
 # License:   FSL-1.1-ALv2
 # Copyright: (c) 2026 HYPERI PTY LIMITED
 #
 # TypeScript application variant in the hyperi-ci test matrix. No TS
-# library variant currently — none in production use yet. This repo
-# specifically exercises the buildx + GHCR push path for Node-based
-# server apps.
+# library variant currently — none in production use yet.
 
 language: typescript
-
-runners:
-  default: ubuntu-latest
 
 quality:
   enabled: true
 
 test:
   enabled: true
+  coverage: true
 
 build:
   enabled: true
-  type: app
+  strategies:
+    - native
 
 publish:
   enabled: true
@@ -31,3 +31,6 @@ publish:
     platforms:
       - linux/amd64
       - linux/arm64
+
+typescript:
+  package_manager: auto
