@@ -10,20 +10,22 @@
  * push path; the server itself just needs to boot.
  */
 
-import { createServer, type Server } from "node:http";
-import { env } from "node:process";
+import { createServer, type Server } from 'node:http';
+import { env } from 'node:process';
 
-export const VERSION = "1.0.0";
+export const VERSION = '1.0.0';
 
 export function startServer(port = 8080): Server {
   const server = createServer((req, res) => {
-    if (req.url === "/healthz") {
-      res.writeHead(200, { "Content-Type": "text/plain" });
-      res.end("ok\n");
+    if (req.url === '/healthz') {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end('ok\n');
       return;
     }
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ name: "ci-test-ts-app", version: VERSION }) + "\n");
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(
+      JSON.stringify({ name: 'ci-test-ts-app', version: VERSION }) + '\n',
+    );
   });
 
   server.listen(port, () => {
@@ -33,6 +35,6 @@ export function startServer(port = 8080): Server {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const port = Number.parseInt(env.PORT ?? "8080", 10);
+  const port = Number.parseInt(env.PORT ?? '8080', 10);
   startServer(port);
 }
