@@ -1,3 +1,13 @@
+## [1.0.9](https://github.com/hyperi-io/ci-test-ts-app/compare/v1.0.8...v1.0.9) (2026-04-30)
+
+
+### Bug Fixes
+
+* format with prettier, audit fix, ignore tool-managed files ([dd128c2](https://github.com/hyperi-io/ci-test-ts-app/commit/dd128c25c21a901c2632edcdb00d32105ecc6659))
+* greenfield as ci-test-ts-app — Node HTTP server + GHCR push ([e38f824](https://github.com/hyperi-io/ci-test-ts-app/commit/e38f8246303c5e8fd715183d2ff2fa00c3815983))
+* refresh init output, drop tag input from workflow, target=oss ([69643d3](https://github.com/hyperi-io/ci-test-ts-app/commit/69643d3b35a15b1d24b5b4d3d404de35e593c264))
+* regenerate package-lock.json after adding @types/node ([9247911](https://github.com/hyperi-io/ci-test-ts-app/commit/92479118ad6cc23d986d2809e64086e71a885964))
+
 ## [1.0.8](https://github.com/hyperi-io/ci-test-ts-simple/compare/v1.0.7...v1.0.8) (2026-03-02)
 
 
