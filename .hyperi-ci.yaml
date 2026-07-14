@@ -31,6 +31,12 @@ publish:
     platforms:
       - linux/amd64
       - linux/arm64
+    # Branch-mode dev images (hyperi-ci branch-mode plan): opted-in PRs
+    # push branch-<slug> + branch-<slug>-sha-<short> dev tags to GHCR
+    # only. Pairs with the HYPERCI_BRANCH_BUILD repo variable and the
+    # scheduled ghcr-prune.yml workflow. This fixture is the fleet
+    # dev-push canary for the node container template.
+    dev_push: true
 
 typescript:
   package_manager: auto

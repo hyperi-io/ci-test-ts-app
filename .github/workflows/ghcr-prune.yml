@@ -1,0 +1,33 @@
+# Project:   ci-test-ts-app
+# File:      .github/workflows/ghcr-prune.yml
+# Purpose:   Scheduled prune of branch-mode dev images (dev_push pairing)
+# License:   FSL-1.1-ALv2
+# Copyright: (c) 2026 HYPERI PTY LIMITED
+
+# Dev images (branch-* / dev-sha-* tags) are ephemeral by design - this
+# prunes them so GHCR never accumulates dead branch images. GA tags
+# (vX.Y.Z / latest / sha-*) are never touched: dev tags live in their own
+# namespace. Logic lives in the shared _ghcr-prune.yml.
+
+name: GHCR prune
+
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        type: string
+        default: ''
+        description: "'true' to log what would be deleted without deleting."
+
+permissions:
+  contents: read
+
+jobs:
+  prune:
+    permissions:
+      packages: write
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    with:
+      dry-run: ${{ inputs.dry-run || '' }}
