@@ -1,7 +1,7 @@
 {
   "name": "ci-test-ts-app",
   "version": "1.0.9",
-  "description": "TypeScript app variant \u2014 exercises hyperi-ci container custom mode (GHCR)",
+  "description": "TypeScript app variant — exercises hyperi-ci container custom mode (GHCR)",
   "type": "module",
   "main": "dist/server.js",
   "scripts": {
