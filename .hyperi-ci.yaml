@@ -25,6 +25,24 @@ build:
 publish:
   enabled: true
   target: oss
+  # NO PUBLIC REGISTRY UPLOAD. Every ci-test fixture carries this.
+  #
+  # A falsy destination is hyperi-ci's per-artefact opt-out, so everything up
+  # to the upload still runs and is still under test -- version resolution, the
+  # tag, the package build, the GH Release, the GHCR container below. Only the
+  # leg out to npmjs.com is cut.
+  #
+  # TypeScript has NO equivalent of the Rust binary short-circuit: publish/run
+  # goes straight from `destination_for("npm")` to `npm publish`. The scope is
+  # @hyperi/*, so a stray publish takes an org-scoped name in public, and npm
+  # unpublish is only available for 72 hours. ci-test-rust-lib published 1.0.0
+  # to crates.io on 2026-07-29 from a routine fixture run; this is the same
+  # hole with a different registry.
+  #
+  # `publish.enabled: false` does NOT do this. hyperi-ci never reads that key
+  # (hyperi-io/hyperi-ci#79) -- cut the destination, not the stage.
+  destinations_oss:
+    npm: false
   container:
     enabled: true
     dockerfile: Dockerfile
