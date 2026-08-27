@@ -12,6 +12,15 @@ language: typescript
 
 quality:
   enabled: true
+  typescript:
+    # This fixture gates promotion of the ARC runner images, so a blocking
+    # audit lets an advisory in its own transitive dev-dependencies stop the
+    # fleet taking a new image (nanoid GHSA-2v37-7h3g-55p8 did exactly that).
+    # The canary proves the image, not this repo's dependency hygiene, and the
+    # advisory is still reported as a warning.
+    #
+    # Matches rust, whose `audit` is already `warn`.
+    audit: warn
 
 test:
   enabled: true
