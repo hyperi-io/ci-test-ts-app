@@ -13,14 +13,18 @@ language: typescript
 quality:
   enabled: true
   typescript:
-    audit:
-      mode: warn
-      reason: >-
-        This fixture gates promotion of the ARC runner images, so a blocking
-        audit lets an advisory in its own transitive dev-dependencies stop the
-        fleet taking a new image (nanoid GHSA-2v37-7h3g-55p8 did exactly
-        that). The canary proves the image, not this repo's dependency
-        hygiene, and the advisory is still reported as a warning.
+    # This fixture gates promotion of the ARC runner images, so a blocking
+    # audit lets an advisory in its own transitive dev-dependencies stop the
+    # fleet taking a new image (nanoid GHSA-2v37-7h3g-55p8 did exactly that).
+    # The canary proves the image, not this repo's dependency hygiene, and the
+    # advisory is still reported as a warning.
+    #
+    # DO NOT convert this to the `mode` + `reason` mapping until a wheel
+    # carrying hyperi-ci#250 is on PyPI. A released CLI does not recognise the
+    # mapping, stringifies it to a non-mode, and fails the gate CLOSED -- the
+    # opposite of what the downgrade is for. Converting early broke this
+    # fixture once.
+    audit: warn
 
 test:
   enabled: true
