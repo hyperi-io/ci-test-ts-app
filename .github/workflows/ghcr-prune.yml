@@ -28,6 +28,6 @@ jobs:
   prune:
     permissions:
       packages: write
-    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@fix/284-buildx-cgroup-parent
     with:
       dry-run: ${{ inputs.dry-run || '' }}
