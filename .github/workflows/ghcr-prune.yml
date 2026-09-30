@@ -28,6 +28,6 @@ jobs:
   prune:
     permissions:
       packages: write
-    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@rehearse/416-internal
     with:
       dry-run: ${{ inputs.dry-run || '' }}
