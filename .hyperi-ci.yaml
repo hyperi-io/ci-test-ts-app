@@ -30,7 +30,7 @@ build:
   strategies:
     - native
 
-publish:
+release:
   enabled: true
   # NO PUBLIC REGISTRY UPLOAD. Every ci-test fixture carries this.
   #
@@ -46,7 +46,7 @@ publish:
   # to crates.io on 2026-07-29 from a routine fixture run; this is the same
   # hole with a different registry.
   #
-  # `publish.enabled: false` would stop the whole release stage, which is the
+  # `release.enabled: false` would stop the whole release stage, which is the
   # part under test -- cut the destination, not the stage.
   destinations:
     npm: false
