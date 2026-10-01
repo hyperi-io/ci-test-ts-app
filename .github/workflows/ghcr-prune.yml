@@ -28,6 +28,6 @@ jobs:
   prune:
     permissions:
       packages: write
-    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@fix/deps-catch-up-pins
     with:
       dry-run: ${{ inputs.dry-run || '' }}
