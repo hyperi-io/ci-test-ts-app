@@ -5,7 +5,7 @@
 # Copyright: (c) 2026 HYPERI PTY LIMITED
 
 # -- Build stage ---------------------------------------------------------------
-FROM node:22-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /build
 
@@ -18,7 +18,7 @@ COPY src/ ./src/
 RUN npm run build
 
 # -- Runtime stage -------------------------------------------------------------
-FROM node:22-alpine
+FROM node:24-alpine
 
 # Reproducible non-root user
 RUN addgroup -g 10001 -S app && adduser -u 10001 -S app -G app
