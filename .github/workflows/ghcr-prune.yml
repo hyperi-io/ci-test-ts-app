@@ -28,6 +28,6 @@ jobs:
   prune:
     permissions:
       packages: write
-    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@refactor/s4-setup-runtime-switch-v2
     with:
       dry-run: ${{ inputs.dry-run || '' }}
