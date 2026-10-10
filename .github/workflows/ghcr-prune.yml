@@ -28,6 +28,6 @@ jobs:
   prune:
     permissions:
       packages: write
-    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@main
+    uses: hyperi-io/hyperi-ci/.github/workflows/_ghcr-prune.yml@fix/corepack-readonly-bin
     with:
       dry-run: ${{ inputs.dry-run || '' }}
