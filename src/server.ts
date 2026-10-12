@@ -23,9 +23,7 @@ export function startServer(port = 8080): Server {
       return;
     }
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(
-      JSON.stringify({ name: 'ci-test-ts-app', version: VERSION }) + '\n',
-    );
+    res.end(JSON.stringify({ name: 'ci-test-ts-app', version: VERSION }) + '\n');
   });
 
   server.listen(port, () => {
