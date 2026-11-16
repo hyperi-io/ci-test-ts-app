@@ -16,15 +16,14 @@
     "node": ">=20"
   },
   "license": "FSL-1.1-ALv2",
-  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^10.0.0",
     "@types/node": "^22.0.0",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.12",
     "eslint": "^10.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.4.0",
     "typescript-eslint": "^8.0.0",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.12"
   }
 }
